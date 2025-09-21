@@ -1,5 +1,6 @@
-## Hi there 👋
+## Perxenic Studios
 
+https://www.perxenic.dev/
 
 ## Auseawesomes Github Stats
 ![Auseawesome's Stats](https://github-readme-stats.vercel.app/api?username=Auseawesome&theme=tokyonight&show_icons=true&hide_border=false&count_private=true)
