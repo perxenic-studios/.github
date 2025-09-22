@@ -42,13 +42,13 @@ jobs:
           base: classic
           plugin_isocalendar: yes
     auseawesome-isocalendar:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - uses: lowlighter/metrics@latest
-        with:
-          filename: auseawesome-isocalendar.svg
-          token: ${{ secrets.METRICS_TOKEN_AUSEAWESOME }}
-          base: ""
-          plugin_isocalendar: yes
+      runs-on: ubuntu-latest
+      permissions:
+        contents: write
+      steps:
+        - uses: lowlighter/metrics@latest
+          with:
+            filename: auseawesome-isocalendar.svg
+            token: ${{ secrets.METRICS_TOKEN_AUSEAWESOME }}
+            base: ""
+            plugin_isocalendar: yes
