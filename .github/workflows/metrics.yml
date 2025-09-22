@@ -25,7 +25,7 @@ jobs:
         uses: lowlighter/metrics@latest
         with:
           filename: perxenic-facts.svg
-          token: ${{ secrets.MMETRICS_TOKEN_AUSEAWESOME }}
+          token: ${{ secrets.METRICS_TOKEN_AUSEAWESOME }}
           user: perxenic-studios
           base: ""
           plugin_habits: yes
