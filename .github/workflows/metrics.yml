@@ -40,7 +40,7 @@ jobs:
           filename: auseawesome-metrics.svg
           token: ${{ secrets.METRICS_TOKEN_AUSEAWESOME }}
           base: classic
-          plugin_isocalendar: yes
+          user: auseawesome
   auseawesome-isocalendar:
     runs-on: ubuntu-latest
     permissions:
@@ -52,3 +52,4 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN_AUSEAWESOME }}
           base: ""
           plugin_isocalendar: yes
+          user: auseawesome
