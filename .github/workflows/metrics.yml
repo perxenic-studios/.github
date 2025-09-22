@@ -18,7 +18,7 @@ jobs:
         with:
           filename: perxenic-metrics.svg
           token: ${{ secrets.METRICS_TOKEN_AUSEAWESOME }}
-          base: classic
+          template: classic
           user: perxenic-studios
       - name: Perxenic Lines
         if: ${{ success() || failure() }}
@@ -26,7 +26,7 @@ jobs:
         with:
           filename: perxenic-lines.svg
           token: ${{ secrets.METRICS_TOKEN_AUSEAWESOME }}
-          base: ""
+          base: repositories
           plugin_lines: yes
           user: perxenic-studios
       - name: Auseawesome Metrics
@@ -35,5 +35,14 @@ jobs:
         with:
           filename: auseawesome-metrics.svg
           token: ${{ secrets.METRICS_TOKEN_AUSEAWESOME }}
-          base: classic
+          template: classic
+          user: auseawesome
+      - name: Auseawesome Isometic Calendar
+        if: ${{ success() || failure() }}
+        uses: lowlighter/metrics@latest
+        with:
+          filename: auseawesome-isocalendar.svg
+          token: ${{ secrets.METRICS_TOKEN_AUSEAWESOME }}
+          base: ""
+          plugin_isocalendar: yes
           user: auseawesome
