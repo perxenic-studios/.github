@@ -38,3 +38,18 @@ jobs:
           base: ""
           plugin_isocalendar: yes
           user: auseawesome
+      - name: Lucky Metrics
+        if: ${{ success() || failure() }}
+        uses: lowlighter/metrics@latest
+        with:
+          filename: lucky-metrics.svg
+          token: ${{ secrets.METRICS_TOKEN_LUCKY }}
+          template: classic
+      - name: Lucky Isometric Calendar
+        if: ${{ success() || failure() }}
+        uses: lowlighter/metrics@latest
+        with:
+          filename: lucky-isocalendar.svg
+          token: ${{ secrets.METRICS_TOKEN_LUCKY }}
+          base: ""
+          plugin_isocalendar: yes
