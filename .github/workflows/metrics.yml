@@ -17,6 +17,17 @@ jobs:
           filename: perxenic-metrics.svg
           token: ${{ secrets.METRICS_TOKEN_AUSEAWESOME }}
           base: classic
+          user: perxenic-studios
+  perxenic-lines:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          filename: perxenic-lines.svg
+          token: ${{ secrets.METRICS_TOKEN_AUSEAWESOME }}
+          base: ""
           plugin_lines: yes
           user: perxenic-studios
   auseawesome-metrics:
@@ -30,4 +41,14 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN_AUSEAWESOME }}
           base: classic
           plugin_isocalendar: yes
-          plugin_lines: yes
+    auseawesome-isocalendar:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          filename: auseawesome-isocalendar.svg
+          token: ${{ secrets.METRICS_TOKEN_AUSEAWESOME }}
+          base: ""
+          plugin_isocalendar: yes
