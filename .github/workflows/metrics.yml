@@ -20,6 +20,7 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN_AUSEAWESOME }}
           base: classic
           user: perxenic-studios
+          output_action: pull_request
       - name: Perxenic Lines
         if: ${{ success() || failure() }}
         uses: lowlighter/metrics@latest
@@ -29,6 +30,7 @@ jobs:
           base: ""
           plugin_lines: yes
           user: perxenic-studios
+          output_action: pull_request_merge
       - name: Auseawesome Metrics
         if: ${{ success() || failure() }}
         uses: lowlighter/metrics@latest
@@ -37,6 +39,7 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN_AUSEAWESOME }}
           base: classic
           user: auseawesome
+          output_action: pull_request_merge
       - name: Auseawesome Isometic Calendar
         if: ${{ success() || failure() }}
         uses: lowlighter/metrics@latest
@@ -46,3 +49,4 @@ jobs:
           base: ""
           plugin_isocalendar: yes
           user: auseawesome
+          output_action: pull_request_merge
