@@ -7,12 +7,27 @@ on:
   # (optional) Run workflow when pushing on master/main
   push: {branches: ["master", "main"]}
 jobs:
-  github-metrics:
+  perxenic-metrics:
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
       - uses: lowlighter/metrics@latest
         with:
+          filename: perxenic-metrics.svg
           token: ${{ secrets.METRICS_TOKEN_AUSEAWESOME }}
+          base: classic
+          plugin_lines: yes
           user: perxenic-studios
+  auseawesome-metrics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          filename: auseawesome-metrics.svg
+          token: ${{ secrets.METRICS_TOKEN_AUSEAWESOME }}
+          base: classic
+          plugin_isocalendar: yes
+          plugin_lines: yes
