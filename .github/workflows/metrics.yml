@@ -12,41 +12,31 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@latest
+      - name: Perxenic Metrics
+        if: ${{ success() || failure() }}
+        uses: lowlighter/metrics@latest
         with:
           filename: perxenic-metrics.svg
           token: ${{ secrets.METRICS_TOKEN_AUSEAWESOME }}
           base: classic
           user: perxenic-studios
-  perxenic-lines:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - uses: lowlighter/metrics@latest
+      - name: Perxenic Lines
+        uses: lowlighter/metrics@latest
         with:
           filename: perxenic-lines.svg
           token: ${{ secrets.METRICS_TOKEN_AUSEAWESOME }}
           base: ""
           plugin_lines: yes
           user: perxenic-studios
-  auseawesome-metrics:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - uses: lowlighter/metrics@latest
+      - name: Auseawesome Metrics
+        uses: lowlighter/metrics@latest
         with:
           filename: auseawesome-metrics.svg
           token: ${{ secrets.METRICS_TOKEN_AUSEAWESOME }}
           base: classic
           user: auseawesome
-  auseawesome-isocalendar:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - uses: lowlighter/metrics@latest
+      - name: Auseawesome Isometic Calendar
+        uses: lowlighter/metrics@latest
         with:
           filename: auseawesome-isocalendar.svg
           token: ${{ secrets.METRICS_TOKEN_AUSEAWESOME }}
