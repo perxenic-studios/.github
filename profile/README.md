@@ -2,6 +2,8 @@
 
 https://www.perxenic.dev/
 
+![Perxenic Stats](https://raw.githubusercontent.com/perxenic-studios/.github/refs/heads/main/github-metrics.svg)
+
 ## Auseawesomes Github Stats
 ![Auseawesome's Stats](https://github-readme-stats.vercel.app/api?username=Auseawesome&theme=tokyonight&show_icons=true&hide_border=false&count_private=true)
 ![Auseawesome's Streak](https://github-readme-streak-stats.herokuapp.com/?user=Auseawesome&theme=tokyonight&hide_border=false)
