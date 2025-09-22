@@ -3,7 +3,6 @@
 https://www.perxenic.dev/
 
 ![Perxenic Stats](https://raw.githubusercontent.com/perxenic-studios/.github/refs/heads/main/perxenic-metrics.svg)
-![Perxenic Lines](https://raw.githubusercontent.com/perxenic-studios/.github/refs/heads/main/perxenic-lines.svg)
 
 ## Auseawesome's Github Stats
 ![Auseawesome Stats](https://raw.githubusercontent.com/perxenic-studios/.github/refs/heads/main/auseawesome-metrics.svg)
