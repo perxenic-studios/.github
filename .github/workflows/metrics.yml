@@ -21,6 +21,7 @@ jobs:
           base: classic
           user: perxenic-studios
       - name: Perxenic Lines
+        if: ${{ success() || failure() }}
         uses: lowlighter/metrics@latest
         with:
           filename: perxenic-lines.svg
@@ -29,6 +30,7 @@ jobs:
           plugin_lines: yes
           user: perxenic-studios
       - name: Auseawesome Metrics
+        if: ${{ success() || failure() }}
         uses: lowlighter/metrics@latest
         with:
           filename: auseawesome-metrics.svg
@@ -36,6 +38,7 @@ jobs:
           base: classic
           user: auseawesome
       - name: Auseawesome Isometic Calendar
+        if: ${{ success() || failure() }}
         uses: lowlighter/metrics@latest
         with:
           filename: auseawesome-isocalendar.svg
